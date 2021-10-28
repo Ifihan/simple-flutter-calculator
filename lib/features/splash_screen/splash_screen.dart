@@ -22,7 +22,7 @@ class _SplashState extends State<Splash> {
             pageBuilder: (context, animation, __) {
               return FadeTransition(
                 opacity: animation,
-                child: const Calc(),
+                child: const CalcApp(),
               );
             }),
       ),
@@ -37,10 +37,12 @@ class _SplashState extends State<Splash> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(
-              image: const AssetImage('assets/images/calc.png'),
-              height: screenAwareSize(80, context),
-              width: screenAwareSize(66.68, context),
+            Container(
+              height: 100,
+              width: 100,
+              child: const Image(
+                image:  AssetImage('assets/images/calc.png'),
+              ),
             ),
           ],
         ),
